@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('perihal');
             $table->foreignId('id_jenis_surat')->constrained('jenis_surat', 'id_jenis_surat')->onDelete('cascade');
             $table->string('file_surat');
-            $table->foreignId('id_user_input')->constrained('users')->onDelete('cascade');
+            $table->foreignId('id_user_input')->constrained('users', 'id_user')->onDelete('cascade');
             $table->timestamps();
         });
     }
