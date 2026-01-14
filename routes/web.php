@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\OtentikasiController;
 
-Route::get('/', [OtentikasiController::class, 'tampilHalamanLogin'])->name('login');
+Route::get('/', [OtentikasiController::class, 'tampilHalamanLogin'])->name('home');
 Route::get('/login', [OtentikasiController::class, 'tampilHalamanLogin'])->name('login');
 Route::post('/login', [OtentikasiController::class, 'prosesLogin'])->name('login.proses');
 Route::post('/logout', [OtentikasiController::class, 'prosesLogout'])->name('logout');
