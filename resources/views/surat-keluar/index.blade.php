@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="table-responsive">
-                    <table id="zero_config" class="table table-striped table-bordered text-nowrap align-middle">
+                    <table id="table-surat-keluar" class="table table-striped table-bordered text-nowrap align-middle">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -268,6 +268,14 @@
     <script src="{{ asset('assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/js/datatable/datatable-basic.init.js') }}"></script>
     <script src="{{ asset('assets/libs/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table-surat-keluar').DataTable({
+                scrollX: true,
+                "order": []
+            });
+        });
+    </script>
 
     <script>
         @if(session('sukses'))
