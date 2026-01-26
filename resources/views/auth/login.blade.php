@@ -14,6 +14,20 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
 
     <title>SINERGI SMKI1- Sistem Integrasi Administrasi Sekolah SMKI1</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="SINERGI SMKI1 - Sistem Integrasi Administrasi Sekolah">
+    <meta property="og:description" content="Sistem Integrasi Administrasi Sekolah SMKI1. Platform digital untuk pengelolaan persuratan, kepegawaian, dan inventaris sekolah.">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="SINERGI SMKI1 - Sistem Integrasi Administrasi Sekolah">
+    <meta property="twitter:description" content="Sistem Integrasi Administrasi Sekolah SMKI1. Platform digital untuk pengelolaan persuratan, kepegawaian, dan inventaris sekolah.">
+    <meta property="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 </head>
 
 <body>
