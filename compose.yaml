@@ -9,7 +9,7 @@ services:
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
-            - '${APP_PORT:-80}:80'
+            - '${APP_PORT:-8000}:80'
             - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
         environment:
             WWWUSER: '${WWWUSER}'
@@ -23,6 +23,20 @@ services:
             - sail
         depends_on:
             - mysql
+    caddy:
+        image: caddy:alpine
+        restart: unless-stopped
+        ports:
+            - '80:80'
+            - '443:443'
+        volumes:
+            - ./Caddyfile:/etc/caddy/Caddyfile
+            - caddy_data:/data
+            - caddy_config:/config
+        networks:
+            - sail
+        depends_on:
+            - laravel.test
     mysql:
         image: 'mysql:8.4'
         ports:
@@ -61,4 +75,8 @@ networks:
         driver: bridge
 volumes:
     sail-mysql:
+        driver: local
+    caddy_data:
+        driver: local
+    caddy_config:
         driver: local
