@@ -12,12 +12,12 @@
                                                     <img src="/assets/images/profile/user-1.jpg"
                                                         alt="modernize-img" width="40" height="40" />
                                                 </div>
-                                                <h5 class="fw-semibold mb-0 fs-5">Selamat Datang Kembali Admin!</h5>
+                                                <h5 class="fw-semibold mb-0 fs-5">Selamat Datang Kembali {{ Auth::user()->nama ?? Auth::user()->username }}!</h5>
                                             </div>
                                             <div class="d-flex align-items-center">
                                                 <div class="border-end pe-4 border-muted border-opacity-10">
                                                     <h3 class="mb-1 fw-semibold fs-8 d-flex align-content-center">
-                                                        12/01/2026
+                                                        {{ now()->translatedFormat('d F Y') }}
                                                     </h3>
                                                     <p class="mb-0 text-dark">Tanggal Hari Ini</p>
                                                 </div>
@@ -46,7 +46,7 @@
                         <div class="col-sm-6 col-lg-3 d-flex align-items-stretch">
                             <div class="card w-100">
                                 <div class="card-body p-4">
-                                    <h4 class="fw-semibold">15</h4>
+                                    <h4 class="fw-semibold">{{ $totalSuratMasuk }}</h4>
                                     <p class="mb-2 fs-3">Surat Masuk</p>
                                     <div id="spark-surat-masuk"></div>
                                 </div>
@@ -55,7 +55,7 @@
                         <div class="col-sm-6 col-lg-3 d-flex align-items-stretch">
                             <div class="card w-100">
                                 <div class="card-body p-4">
-                                    <h4 class="fw-semibold">12</h4>
+                                    <h4 class="fw-semibold">{{ $totalSuratKeluar }}</h4>
                                     <p class="mb-2 fs-3">Surat Keluar</p>
                                     <div id="spark-surat-keluar"></div>
                                 </div>
@@ -67,7 +67,7 @@
                                 <div class="card-body p-4">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div>
-                                            <h4 class="fw-semibold">124</h4>
+                                            <h4 class="fw-semibold">{{ $totalPegawai }}</h4>
                                             <p class="mb-0 fs-3">Total Pegawai</p>
                                         </div>
                                         <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center"
@@ -84,7 +84,7 @@
                                 <div class="card-body p-4">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div>
-                                            <h4 class="fw-semibold">1,280</h4>
+                                            <h4 class="fw-semibold">{{ number_format($totalAset) }}</h4>
                                             <p class="mb-0 fs-3">Total Aset</p>
                                         </div>
                                         <div class="bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center"

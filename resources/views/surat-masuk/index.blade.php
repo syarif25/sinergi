@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="table-responsive">
-                    <table id="zero_config" class="table table-striped table-bordered text-nowrap align-middle">
+                    <table id="scroll_hor" class="table table-striped table-bordered text-nowrap align-middle">
                         <thead>
                             <tr>
                                 <th>No</th>
