@@ -3,6 +3,7 @@
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/libs/sweetalert2/dist/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libs/select2/dist/css/select2.min.css') }}">
 @endpush
 
 @section('content')
@@ -38,7 +39,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Tahun Lulus</label>
-                        <select class="form-select" name="tahun_lulus">
+                        <select class="form-select select2" name="tahun_lulus" style="width: 100%;">
                             <option value="">Semua Tahun</option>
                             @for($tahun = date('Y') + 1; $tahun >= 2000; $tahun--)
                                 <option value="{{ $tahun }}" {{ request('tahun_lulus') == $tahun ? 'selected' : '' }}>{{ $tahun }}</option>
@@ -230,8 +231,19 @@
     <script src="{{ asset('assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/js/datatable/datatable-basic.init.js') }}"></script>
     <script src="{{ asset('assets/libs/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/select2/dist/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/select2/dist/js/select2.min.js') }}"></script>
 
     <script>
+        $(function () {
+            // Initialize Select2 for all select2 classes
+            $('.select2').each(function() {
+                $(this).select2({
+                    dropdownParent: $(this).closest('.modal').length ? $(this).closest('.modal') : $(document.body)
+                });
+            });
+        });
+
         @if(session('sukses'))
             Swal.fire({
                 title: 'Berhasil!',

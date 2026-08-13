@@ -206,24 +206,7 @@
                             </a>
                         </li>
 
-                        <!-- ---------------------------------- -->
-                        <!-- DOCUMENTATION -->
-                        <!-- ---------------------------------- -->
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">DOCUMENTATION</span>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link sidebar-link" href="../../docs/index.html" aria-expanded="false">
-                                <span class="rounded-3">
-                                    <i class="ti ti-file-text"></i>
-                                </span>
-                                <span class="hide-menu">Panduan Penggunaan</span>
-                            </a>
-                        </li>
-                        <!-- ---------------------------------- -->
-                        <!-- OTHER -->
-                        <!-- ---------------------------------- -->
+
                     </ul>
                 </nav>
             </div>
@@ -515,25 +498,7 @@
                                         </a>
                                     </li>
 
-                                    <!-- ---------------------------------- -->
-                                    <!-- DOCUMENTATION -->
-                                    <!-- ---------------------------------- -->
-                                    <li class="nav-small-cap">
-                                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                                        <span class="hide-menu">DOCUMENTATION</span>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a class="sidebar-link sidebar-link" href="../../docs/index.html"
-                                            aria-expanded="false">
-                                            <span class="rounded-3">
-                                                <i class="ti ti-file-text"></i>
-                                            </span>
-                                            <span class="hide-menu">Panduan Penggunaan</span>
-                                        </a>
-                                    </li>
-                                    <!-- ---------------------------------- -->
-                                    <!-- OTHER -->
-                                    <!-- ---------------------------------- -->
+
                                 </ul>
                             </div>
                         </nav>
@@ -1211,24 +1176,7 @@
                                 </a>
                             </li>
 
-                            <!-- ---------------------------------- -->
-                            <!-- DOCUMENTATION -->
-                            <!-- ---------------------------------- -->
-                            <li class="nav-small-cap">
-                                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                                <span class="hide-menu">DOCUMENTATION</span>
-                            </li>
-                            <li class="sidebar-item">
-                                <a class="sidebar-link sidebar-link" href="../../docs/index.html" aria-expanded="false">
-                                    <span class="rounded-3">
-                                        <i class="ti ti-file-text"></i>
-                                    </span>
-                                    <span class="hide-menu">Panduan Penggunaan</span>
-                                </a>
-                            </li>
-                            <!-- ---------------------------------- -->
-                            <!-- OTHER -->
-                            <!-- ---------------------------------- -->
+
                         </ul>
                     </nav>
                     <!-- End Sidebar navigation -->

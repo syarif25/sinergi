@@ -30,40 +30,6 @@
         </div>
     </div>
 
-    <div class="card w-100 position-relative overflow-hidden">
-        <div class="px-4 py-3 border-bottom">
-            <h5 class="card-title fw-semibold mb-0 lh-sm">Filter Data</h5>
-        </div>
-        <div class="card-body p-4">
-            <form action="{{ route('arsip-kepegawaian.index') }}" method="GET">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Pegawai</label>
-                        <select class="form-select select2" name="id_pegawai">
-                            <option value="">Semua Pegawai</option>
-                            @foreach($daftarPegawai as $pegawai)
-                                <option value="{{ $pegawai->id_pegawai }}" {{ request('id_pegawai') == $pegawai->id_pegawai ? 'selected' : '' }}>
-                                    {{ $pegawai->nama }} ({{ $pegawai->nip }})
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Jenis Dokumen</label>
-                        <input type="text" class="form-control" name="jenis_dokumen" value="{{ request('jenis_dokumen') }}" placeholder="Contoh: SK, KTP...">
-                    </div>
-                    <div class="col-md-4 mb-3 d-flex align-items-end gap-2">
-                        <button type="submit" class="btn btn-primary">
-                            <i class="ti ti-filter me-1"></i>Tampilkan
-                        </button>
-                        <a href="{{ route('arsip-kepegawaian.index') }}" class="btn btn-secondary">
-                            <i class="ti ti-refresh me-1"></i>Reset
-                        </a>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <div class="datatables">
         <div class="card">

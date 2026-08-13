@@ -185,7 +185,7 @@
                                                         <div class="mb-3">
                                                             <label class="form-label">File Surat (Biarkan kosong jika tidak diubah)</label>
                                                             <input type="file" class="form-control" name="file_surat" accept=".pdf,.jpg,.jpeg,.png">
-                                                            <div class="form-text">Format: PDF, JPG, PNG. Max 2MB.</div>
+                                                            <div class="form-text">Format: PDF, JPG, PNG. <span class="text-danger fw-bold">Max 15MB.</span></div>
                                                             <div class="invalid-feedback"></div>
                                                             @if($surat->file_surat)
                                                                 <div class="mt-2">File saat ini: <a href="{{ Storage::url($surat->file_surat) }}" target="_blank">Lihat</a></div>
@@ -263,7 +263,7 @@
                         <div class="mb-3">
                             <label class="form-label">File Surat</label>
                             <input type="file" class="form-control" name="file_surat" accept=".pdf,.jpg,.jpeg,.png" required>
-                            <div class="form-text">Format: PDF, JPG, PNG. Max 2MB.</div>
+                            <div class="form-text">Format: PDF, JPG, PNG. <span class="text-danger fw-bold">Max 15MB.</span></div>
                             <div class="invalid-feedback"></div>
                         </div>
                     </div>

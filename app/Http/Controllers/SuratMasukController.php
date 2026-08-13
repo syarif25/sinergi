@@ -39,11 +39,11 @@ class SuratMasukController extends Controller
             'pengirim' => 'required|string|max:255',
             'perihal' => 'required|string|max:255',
             'id_jenis_surat' => 'required|exists:jenis_surat,id_jenis_surat',
-            'file_surat' => 'required|file|mimes:pdf,jpg,jpeg,png|max:2048', // Max 2MB
+            'file_surat' => 'required|file|mimes:pdf,jpg,jpeg,png|max:15360', // Max 15MB
         ], [
             'file_surat.required' => 'File surat wajib diupload.',
             'file_surat.mimes' => 'Format file harus PDF, JPG, JPEG, atau PNG.',
-            'file_surat.max' => 'Ukuran file maksimal 2MB.',
+            'file_surat.max' => 'Ukuran file maksimal 15MB.',
         ]);
 
         if ($permintaan->hasFile('file_surat')) {
@@ -72,7 +72,7 @@ class SuratMasukController extends Controller
             'pengirim' => 'required|string|max:255',
             'perihal' => 'required|string|max:255',
             'id_jenis_surat' => 'required|exists:jenis_surat,id_jenis_surat',
-            'file_surat' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048',
+            'file_surat' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:15360',
         ]);
 
         if ($permintaan->hasFile('file_surat')) {
